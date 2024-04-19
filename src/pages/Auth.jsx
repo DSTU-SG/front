@@ -5,6 +5,7 @@ const Auth = () => {
       <div>
         <h1>
           Auth
+          lkh
         </h1>
       </div>
 
