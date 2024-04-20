@@ -1,12 +1,17 @@
 import React from "react";
+import VoteItem from "./VoteItem";
 
 
-const Votelist = () => {
+const Votelist = ({votes}) => {
 
     return(
         <div className="Votelist"> 
 
-        </div>
+           {votes.map((vote, index) =>
+                        <VoteItem key = {vote.id} vote={vote} />
+                )}
+
+        </div>  
     );
     };
 

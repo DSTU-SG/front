@@ -32,12 +32,7 @@ const Navbar = () => {
                   <NavLink to="/card" ><img src={acc}/></NavLink>
                   <NavLink to="/auth"><img  onClick={logout} src={ext}/></NavLink>
                 </nav>
-                {/* <Link to="/news" exact activeClassName="active">Новости</Link>
-                <Link to="/voting">Голосование</Link>
-                <Link to="/education">Образовательные программы</Link>
-                <Link to="/cash">Кешбек</Link>
-                <Link to="/card"><img src={acc}/></Link>
-                <Link to="/auth"><img  onClick={logout} src={ext}/></Link> */}
+               
        
         </div>
         :

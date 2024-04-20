@@ -19,7 +19,7 @@ const AuthForm = () => {
         console.log(res);
         if(res)
         {
-          document.cookie = "Authorization="+res.data.token_type+" "+res.data.access_token;;
+          document.cookie = "Authorization="+res.data.token_type+" "+res.data.access_token;
           setIsAuth(true);
           localStorage.setItem('auth', 'true');
         }
