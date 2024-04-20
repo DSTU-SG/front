@@ -1,10 +1,15 @@
 import React from "react";
+import Navbar from "../components/UI/Navbar/Navbar";
 
 const News = () => {
+
+
+
     return (
-        <h1>
-          News
-        </h1>
+        <div>
+          <Navbar/>
+ 
+        </div>
     );
 };
 

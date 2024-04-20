@@ -1,0 +1,21 @@
+.navbar
+{
+    background-color: antiquewhite;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar__links
+{
+    width: 70%;
+   a
+   {
+    margin: 2%;
+   }
+}
+
+.navbar__btn
+{
+    width: 20%;
+}

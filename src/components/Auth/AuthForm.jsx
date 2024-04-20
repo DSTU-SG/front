@@ -1,14 +1,21 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import MyInput from "../UI/Input/Input";
 import MyButton from "../UI/Button/Button";
+import { AuthContext } from "../../context";
 
 
 const AuthForm = () => {
     const [user, setUser] = useState({login:'',password:'' });
+    const {isAuth, setIsAuth} = useContext(AuthContext);
+
+
 
     const AuthUser = (e) => {
         e.preventDefault()
         console.log(user);
+        setIsAuth(true);
+        localStorage.setItem('auth', 'true');
+      
         setUser({login: '', password: ''})
     }
 
