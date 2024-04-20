@@ -1,29 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import '../../../styles/mixins/mixin.scss';
+$textColor: #39B54A;
+
 .navbar
 {
+   
     width: 100%;
     display: flex;
     justify-content: space-between;
-    box-shadow: 0px 1px rgba(0, 0, 0, 0.25);
-    position: sticky;
-    top: 0;
-    flex-wrap: wrap;
-    padding: 1.5rem 2rem;
-    transition: top 500ms ease-in-out;
-    z-index: 999;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
 }
 
+.navbar__logo
+{
+    height: 100%;
+}
 .navbar__links
 {
     display: flex;
-    margin: 0 -1em;
-    a
-    {
-        display: inline-block;
-        margin: 0 1em;
-    }
+    align-items: center;
+  width: 70%;
+  justify-content: end;
+  
 }
 
-.navbar__btn
+.navbar__links__link
+  {
+    margin: 0 2%;
+    text-decoration: 0;
+    @include adaptiv-font(22, 5);
+    font-family: 'Open Sans';
+     color: #000000;
+  }
+
+.active
 {
-    width: 20%;
+    color: $textColor;
 }
+
