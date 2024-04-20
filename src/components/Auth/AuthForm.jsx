@@ -2,6 +2,8 @@ import React, { useContext, useState } from "react";
 import MyInput from "../UI/Input/Input";
 import MyButton from "../UI/Button/Button";
 import { AuthContext } from "../../context";
+import AuthServ from "../../API/AuthServ";
+
 
 
 const AuthForm = () => {
@@ -10,12 +12,18 @@ const AuthForm = () => {
 
 
 
-    const AuthUser = (e) => {
+    const AuthUser = async (e) => {
         e.preventDefault()
         console.log(user);
-        setIsAuth(true);
-        localStorage.setItem('auth', 'true');
-      
+        const res = await AuthServ.PostUser(user.login, user.password);
+        console.log(res);
+        if(res.data.access_token)
+        {
+          const str = "Authorization="+res.data.token_type+" "+res.data.access_token;
+          document.cookie = str;
+          setIsAuth(true);
+          localStorage.setItem('auth', 'true');
+        }
         setUser({login: '', password: ''})
     }
 
