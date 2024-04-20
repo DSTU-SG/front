@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../components/UI/Navbar/Navbar";
 
-const News = () => {
+const Voting = () => {
 
 
 
@@ -9,10 +9,10 @@ const News = () => {
         <div>
           <Navbar/>
         <div>
-          Здесь будут новости
+          Здесь будen петиции
         </div>
         </div>
     );
 };
 
-export default News;
+export default Voting;

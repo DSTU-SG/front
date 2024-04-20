@@ -18,9 +18,10 @@ const Navbar = () => {
   
             <div className={classes.navbar__links}>
                 <Link to="/news">Новости</Link>
-                <Link to="/news">Новости</Link>
-                <Link to="/news">Новости</Link>
-                <Link to="/news">Новости</Link>
+                <Link to="/voting">Голосование</Link>
+                <Link to="/education">Образовательные программы</Link>
+                <Link to="/cash">Кешбек</Link>
+                <Link to="/card">Данные по карте</Link>
             </div>
             <div className={classes.navbar__btn}>
             <MyButton onClick={logout}>

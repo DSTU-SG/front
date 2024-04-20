@@ -1,18 +1,15 @@
 import React from "react";
 import Navbar from "../components/UI/Navbar/Navbar";
 
-const News = () => {
-
-
-
+const Card = () => {
     return (
         <div>
           <Navbar/>
         <div>
-          Здесь будут новости
+          Здесь будут данные по карте
         </div>
         </div>
     );
 };
 
-export default News;
+export default Card;
