@@ -1,10 +1,12 @@
-$mainColor: red;
-
+$framecolor: red;
+$authtext: #39B54A;
+$underlinecolor: #DEBD48;
 .auth
 {
-display: flex;
-justify-content: center;
-align-content: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    max-width: 1920px;
 }
 
 .auth__form
@@ -13,5 +15,19 @@ align-content: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 2px solid $mainColor;
+    border: 2px;
+    width: 47%;
+    height: 51vh;
+    border-radius: 20px;
+    box-shadow: 8px 12px 16px rgba(0, 0, 0, 0.25);
+}
+
+h1{
+    text-decoration: underline solid $underlinecolor;
+    color:$authtext;
+    height: 9vh;
+    font: Montserrat;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 48.76px;
 }
