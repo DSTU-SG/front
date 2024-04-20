@@ -1,6 +1,7 @@
 import React from 'react';
-import {Redirect, Route, Switch} from "react-router-dom";
+import { Route} from "react-router-dom";
 import {publicRoutes} from "../router";
+import { Redirect, Switch } from 'react-router-dom/cjs/react-router-dom.min';
 
 const AppRouter = () => {
 
