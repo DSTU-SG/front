@@ -28,7 +28,7 @@ const AuthForm = () => {
 
     return (
         <form className="auth__form">
-          <h1>Authorization</h1>
+          <h1>Авторизация</h1>
           <MyInput
         value={user.login}
         onChange={e => setUser({...user, login: e.target.value})}
