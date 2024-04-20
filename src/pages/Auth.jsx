@@ -2,11 +2,17 @@ import React from "react";
 
 const Auth = () => {
     return (
-      <div>
-        <h1>
-          Auth
-          lkh
-        </h1>
+      <div class="auth">
+        <div class="frame">
+          <h1>auht</h1>
+          <label>
+          Login: <input type="text"/>
+          </label>
+          <label>
+          Password: <input type="text"/>
+          </label>
+          <button>Login</button>
+        </div>
       </div>
 
     );
