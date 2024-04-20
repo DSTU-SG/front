@@ -1,5 +1,11 @@
 @import './Auth';
 @import './mixins/mixin.scss';
+
+body
+{
+    margin: 0;
+    padding: 0;
+}
 // .App
 // {
 //     background-color: red;
