@@ -1,19 +1,12 @@
 import React from "react";
+import AuthForm from "../components/Auth/AuthForm";
 
 const Auth = () => {
     return (
-      <div class="auth">
-        <div class="frame">
-          <h1>auht</h1>
-          <label>
-          Login: <input type="text" placeholder="Login"/>
-          </label>
-          <label>
-          Password: <input type="text" placeholder="Password"/>
-          </label>
-          <button>Login</button>
+
+      <div className="auth">
+       <AuthForm/>
         </div>
-      </div>
 
     );
 };
