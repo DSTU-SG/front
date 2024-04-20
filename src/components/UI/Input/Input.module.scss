@@ -1,10 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import '../../../styles/mixins/mixin.scss';
+
 .myInput {
     border-radius: 10px;
-    width: 77%;
-    height: 10%;
+    width: 90%;
+    @include adaptiv-height(55);
     margin: 2%;
     padding: 2%;
-    background-color:rgba(233, 233, 233, 0.7);
+    background-color:#E9E9E9B2;
     border: 0px;
-    font-size: 25px;
+    @include adaptiv-font(25, 6);
+    font-family: 'Montserrat';
+    font-weight: 500;
+    outline:none;
+}
+
+.myInput:focus
+{
+    border: 3px solid gray;
 }

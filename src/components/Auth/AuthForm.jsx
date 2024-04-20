@@ -17,7 +17,7 @@ const AuthForm = () => {
         console.log(user);
         const res = await AuthServ.PostUser(user.login, user.password);
         console.log(res);
-        if(res.data.access_token)
+        if(res)
         {
           document.cookie = "Authorization="+res.data.token_type+" "+res.data.access_token;;
           setIsAuth(true);
@@ -28,18 +28,32 @@ const AuthForm = () => {
 
     return (
         <form className="auth__form">
-          <h1>Авторизация</h1>
+          <div className="auth__form__head"><h1>Авторизация</h1></div>
+          <div className="auth__form__input">
+            <div className="auth__form__input__one">
+            <span>Введите логин</span>
           <MyInput
         value={user.login}
         onChange={e => setUser({...user, login: e.target.value})}
            type = "text"
-            placeholder ="Введите логин"/>
-          <MyInput
+            />
+            </div>
+           
+          <div className="auth__form__input__one">
+            <span>Введите пароль</span>
+            <MyInput
            value={user.password}
            onChange={e => setUser({...user, password: e.target.value})}
            type = "password" 
-           placeholder ="Введите пароль"/>
+           />
+          </div>
+        <div className="auth__form__input__link"><a href="#">Забыли пароль?</a></div>
+         
+          </div>
+         
           <MyButton onClick={AuthUser}>Войти</MyButton>
+     
+         
         </form>
 
     );
