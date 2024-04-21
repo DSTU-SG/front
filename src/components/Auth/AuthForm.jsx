@@ -17,9 +17,9 @@ const AuthForm = () => {
         console.log(user);
         const res = await AuthServ.PostUser(user.login, user.password);
         console.log(res);
-        if(res)
-        {
-          document.cookie = "Authorization="+res.data.token_type+" "+res.data.access_token;
+        //if(res)
+        //{
+        //  document.cookie = "Authorization="+res.data.token_type+" "+res.data.access_token;
           setIsAuth(true);
         //  localStorage.setItem('auth', 'true');
         //}
