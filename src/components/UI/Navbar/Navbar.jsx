@@ -13,9 +13,11 @@ import NavLink from 'react-router-dom/NavLink';
 const Navbar = () => {
     const {isAuth, setIsAuth} = useContext(AuthContext);
 
+
     const logout = () => {
         setIsAuth(false);
         localStorage.removeItem('auth');
+        localStorage.removeItem('token');
         document.cookie = "Authorization=";
     }
 
@@ -28,7 +30,7 @@ const Navbar = () => {
                   <NavLink to="/news" exact className={classes.navbar__links__link} activeClassName={classes.active}>Новости</NavLink>
                   <NavLink to="/voting" className={classes.navbar__links__link} activeClassName={classes.active}>Голосование</NavLink>
                   <NavLink to="/education" className={classes.navbar__links__link} activeClassName={classes.active}>Образовательные программы</NavLink>
-                  <NavLink to="/cash" className={classes.navbar__links__link} activeClassName={classes.active}>Кешбек</NavLink>
+                  <NavLink to="/service" className={classes.navbar__links__link} activeClassName={classes.active}>Услуги</NavLink>
                   <NavLink to="/card" ><img src={acc}/></NavLink>
                   <NavLink to="/auth"><img  onClick={logout} src={ext}/></NavLink>
                 </nav>

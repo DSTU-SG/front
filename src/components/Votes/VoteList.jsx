@@ -5,7 +5,7 @@ import VoteItem from "./VoteItem";
 const Votelist = ({votes}) => {
 
     return(
-        <div className="Votelist"> 
+        <div className="Votelisted"> 
 
            {votes.map((vote, index) =>
                         <VoteItem key = {vote.id} vote={vote} />

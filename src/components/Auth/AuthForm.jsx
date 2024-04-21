@@ -10,19 +10,29 @@ const AuthForm = () => {
     const [user, setUser] = useState({login:'',password:'' });
     const {isAuth, setIsAuth} = useContext(AuthContext);
 
+    useEffect(() => {
+      setIsAuth(false);
+      localStorage.removeItem('auth');
+      localStorage.removeItem('token');
+      document.cookie = "Authorization=";
+    }, [])
 
+   
 
     const AuthUser = async (e) => {
         e.preventDefault()
         console.log(user);
         const res = await AuthServ.PostUser(user.login, user.password);
         console.log(res);
-        //if(res)
-        //{
-        //  document.cookie = "Authorization="+res.data.token_type+" "+res.data.access_token;
+         setIsAuth(true);
+        if(res)
+        {
+          let b = res.data.token_type;
+          b = b[0].toUpperCase() + b.slice(1);
+          document.cookie = "Authorization="+b+" "+res.data.access_token;
           setIsAuth(true);
-        //  localStorage.setItem('auth', 'true');
-        //}
+          localStorage.setItem('auth', 'true');
+        }
         setUser({login: '', password: ''})
     }
 
