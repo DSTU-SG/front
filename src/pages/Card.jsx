@@ -2,6 +2,11 @@ import React from "react";
 import Navbar from "../components/UI/Navbar/Navbar";
 import Plastik from "../images/card.png";
 import Credit from "../images/credit.png";
+import Blockc from "../images/Block.svg";
+import Newc from "../images/Newc.svg";
+import Freez from "../images/Freez.svg";
+
+
 
 const Card = () => {
 	return (
@@ -16,9 +21,9 @@ const Card = () => {
 						</div>
 						<div className='profile_info'>
 							<div className='profile_info__title'>Личные данные</div>
-							<div className='profile_info__row'>Фамилия</div>
-							<div className='profile_info__row'>Имя</div>
-							<div className='profile_info__row'>Отчество</div>
+              <input className="Fio" type="text" defaultValue="Фамилия" readonly="readonly" />
+              <input className="Fio" type="text" defaultValue="Имя" readonly="readonly" />
+              <input className="Fio" type="text" defaultValue="Отчество" readonly="readonly" />
 						</div>
 					</div>
 					<div className='card settings'>
@@ -78,10 +83,51 @@ const Card = () => {
 					/>
 				</div>
 				<div className='col'>
-					<div className='card actions'></div>
-					<div className='card plastik-details'></div>
-					<div className='card plastik-operations'></div>
-					<div className='card plastik-settings'></div>
+					<div className='card_actions'>
+          <div className='action_card'>
+							<img
+								src={Blockc}
+								className='action_img'
+							/>
+							<span className='action_text'>Заблокировать</span>
+           </div>
+          <div className='action_card'>
+							<img
+								src={Newc}
+								className='action_img'
+							/>
+							<span className='action_text'>Перевыпустить</span>
+           </div>
+          <div className='action_card'>
+							<img
+								src={Freez}
+								className='action_img'
+							/>
+							<span className='action_text'>Заморозить</span>
+						</div>
+            </div>
+					<div className='card_plastik-details'>
+          <div className='card_info__title'>Реквизиты карты</div> <span>показать</span>
+          <div className="cardinfo">
+          <input className="number_card" type="text" placeholder="**** **** **** ****" readonly="readonly" />
+          <input className="date_card" type="text" placeholder="**/**" readonly="readonly" />
+          <input className="cvv_card" type="text" placeholder="***" readonly="readonly" />
+          </div>
+          </div>
+					<div className='card_plastik-operations'>
+            <div className="profile_info__title">Операции по карте</div>
+            <div className="profile_info__row">Траты за апрель</div>
+            <div className="profile_info__row">21673,52</div>
+            <input className="cashdeal" readonly="readonly"/>
+          </div>
+					<div className='card_plastik-settings'>
+          <div className='card_title'>Настройки карты</div>
+						<div className='settings_row'>Дизайн карты</div>
+						<div className='settings_row'>Изменить ПИН-код</div>
+						<div className='settings_row'>Тарифные лимиты</div>
+						<div className='settings_row'>Оповещения об операциях</div>
+						<div className='settings_row'>ПИН-код при оплате картой</div>
+          </div>
 				</div>
 			</div>
 		</div>

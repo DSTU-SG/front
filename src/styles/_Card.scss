@@ -1,11 +1,12 @@
+@import './mixins/mixin.scss';
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+$cardinf: #E9E9E9B2;
+
 .info_wrapper {
 	display: flex;
 	align-items: start;
 	justify-content: space-evenly;
 	padding-top: 70px;
-
-
-
 }
 
 
@@ -14,9 +15,12 @@
     display: flex;
     flex-direction: row;
 }
-.card {
-    width: fit-content;
-    height: fit-content;
+
+
+.card_actions{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     border-radius: 15px;
     box-shadow: 3px 3px 8px 0px #00000033;
     padding: 20px;
@@ -26,10 +30,102 @@
     }
 }
 
+.action_card{
+    display: flex;
+    flex-direction: column;
+    img{@include adaptiv-height(39);}
+    padding-right: 5px;
+    font-family: "Open Sans"
+}
+
+.profile_info{
+    display: flex;
+    flex-direction: column;
+}
+
+.Fio{
+    border-radius: 15px;
+    background-color: #E9E9E9B2;
+    border: 0px;
+}
+
 .plastik,
 .credit {
     padding: 0;
     margin-bottom: 20px;
 
     width: 100%;
+}
+
+.card_plastik-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 15px;
+    box-shadow: 3px 3px 8px 0px #00000033;
+    padding: 20px;
+    height: 16vh;
+
+    &:not(:last-of-type) {
+        margin-bottom: 20px;
+    }
+}
+
+.number_card{
+    background-color: $cardinf;
+    border: 0px;
+    border-radius: 5px;
+    width: 92%;
+}
+.date_card{
+    background-color: $cardinf;
+    border: 0px;
+    border-radius: 5px;
+    width: 44%;
+    
+}
+.cvv_card{
+    background-color: $cardinf;
+    border: 0px;
+    border-radius: 5px;
+    width: 44%;
+}
+
+.cardinfo{
+    display: flex;
+    flex-direction: column;
+}
+
+.card_plastik-operations{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 15px;
+    box-shadow: 3px 3px 8px 0px #00000033;
+    padding: 20px;
+    height: 16vh;
+
+    &:not(:last-of-type) {
+        margin-bottom: 20px;
+    }
+    }
+    
+.cashdeal{
+    background-color: #9b9b9bb2;
+    border-left: 150px solid green;
+    border-radius: 15px;   
+}
+
+.card_plastik-settings{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 15px;
+    box-shadow: 3px 3px 8px 0px #00000033;
+    padding: 20px;
+    height: 16vh;
+
+    &:not(:last-of-type) {
+        margin-bottom: 20px;
+    }
 }
