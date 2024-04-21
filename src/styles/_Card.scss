@@ -4,26 +4,32 @@
 	justify-content: space-evenly;
 	padding-top: 70px;
 
-	.col {
-	}
 
-	.card {
-		width: fit-content;
-		height: fit-content;
-		border-radius: 15px;
-		box-shadow: 3px 3px 8px 0px #00000033;
-		padding: 20px;
 
-		&:not(:last-of-type) {
-			margin-bottom: 20px;
-		}
-	}
+}
 
-	.plastik,
-	.credit {
-		padding: 0;
-		margin-bottom: 20px;
 
-		width: 100%;
-	}
+.col23
+{
+    display: flex;
+    flex-direction: row;
+}
+.card {
+    width: fit-content;
+    height: fit-content;
+    border-radius: 15px;
+    box-shadow: 3px 3px 8px 0px #00000033;
+    padding: 20px;
+
+    &:not(:last-of-type) {
+        margin-bottom: 20px;
+    }
+}
+
+.plastik,
+.credit {
+    padding: 0;
+    margin-bottom: 20px;
+
+    width: 100%;
 }
