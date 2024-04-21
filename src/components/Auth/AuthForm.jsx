@@ -32,6 +32,8 @@ const AuthForm = () => {
           document.cookie = "Authorization="+b+" "+res.data.access_token;
           setIsAuth(true);
           localStorage.setItem('auth', 'true');
+          localStorage.setItem('token',b+" "+res.data.access_token );
+    
         }
         setUser({login: '', password: ''})
     }
