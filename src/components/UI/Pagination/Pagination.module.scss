@@ -1,0 +1,23 @@
+.page__wrapper {
+  
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.page {
+ height: 10%;
+ vertical-align: middle;
+    // cursor: pointer;
+}
+
+.page:hover
+{
+    background-color:#85b98c;
+}
+
+.page__current {
+background-color: #39B54A;
+height: 10%;
+    // font-weight: bold;
+}

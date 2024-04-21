@@ -1,0 +1,25 @@
+@import '../../../styles/mixins/mixin.scss';
+
+
+.page__wrapper {
+  display: flex;
+  width: 100%;
+  @include adaptiv-height(30);
+}
+
+.page {
+ padding: 2%;
+}
+
+.page:hover
+{
+    padding: 2%;
+    background-color:#85b98c;
+}
+
+.page__current {
+padding: 2%;
+background-color: #39B54A;
+
+    // font-weight: bold;
+}
