@@ -9,9 +9,9 @@ const News = () => {
         <div>
           <Navbar/>
         <div>
-          Здесь будут новости
+         
         </div>
-        </div>
+
     );
 };
 
